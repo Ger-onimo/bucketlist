@@ -4,7 +4,8 @@ const RequestHelper = function (url) {
 
 RequestHelper.prototype.get = function () {
   return fetch(this.url)
-    .then((response) => response.json());
+  .then((response) => response.json())
+  .catch((err) => console.error(err));
 };
 
 RequestHelper.prototype.post = function (payload) {
